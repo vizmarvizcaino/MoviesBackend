@@ -6,7 +6,7 @@ const config = {
   development: {
     username: process.env.DB_DEV_USER,
     password: process.env.DB_DEV_PASSWORD,
-    database: process.env.DB_DEV_DB_NAME,
+    database: process.env.DB_DEV_DB_NAME || "express_curd",
     host: process.env.DB_DEV_HOST,
     logging: console.log,
     dialect: 'postgres',

@@ -10,9 +10,11 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_USER: ${{ secrets.USER_NAME_POSTGRES }}
-          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
-          POSTGRES_DB: ${{ secrets.USER_NAMEDB_POSTGRES }}
+          DB_DEV_USER: ${{ secrets.USER_NAME_POSTGRES }}
+          DB_DEV_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          DB_DEV_DB_NAME: ${{ secrets.USER_NAMEDB_POSTGRES }}
+          DB_DEV_HOST: ${{ secrets.DB_HOST }}
+
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
