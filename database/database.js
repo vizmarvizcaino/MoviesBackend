@@ -11,10 +11,10 @@ console.log(config)
 // create connection
 const secuelize = new Sequelize(
   "peliculasdb",
-  config.username,
-  config.password,
+  "postgres",
+  "69720700",
   {
-    host: config.host,
+    host: "localhost",
     dialect: 'postgres',
     logging: config.logging,
     define: {
