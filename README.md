@@ -1,0 +1,1 @@
+Populate .env_sample with your own variables
