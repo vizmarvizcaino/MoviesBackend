@@ -1,16 +1,14 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-
 const config = {
   development: {
-    username: process.env.DB_DEV_USER,
-    password: process.env.DB_DEV_PASSWORD,
-    database: process.env.DB_DEV_DB_NAME || "express_curd",
-    host: process.env.DB_DEV_HOST,
+    username: 'postgres',
+    password: '69720700',
+    database: 'peliculasdb' || "express_curd",
+    host: 'localhost',
     logging: console.log,
-    dialect: 'postgres',
-    
+    dialect: 'postgres',    
   },
   test: {
     username: process.env.DB_TEST_USER || 'postgres',
@@ -29,8 +27,8 @@ const config = {
     logging: false,
     dialect: 'postgres',
   },
-
 };
+console.log(config)
 
 export default config;
 
