@@ -14,7 +14,7 @@ const secuelize = new Sequelize(
   {
     host: "localhost",
     dialect: 'postgres',
-    // logging: config.logging,
+    logging: "console.log",
     define: {
       timestamps: false
     }
