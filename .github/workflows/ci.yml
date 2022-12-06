@@ -10,9 +10,9 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_USER: ${{ secrets.USER_NAME_POSTGRESS }}
-          POSTGRES_PASSWORD: ${{ secrets.POSTGRESS_PASSWORD }}
-          POSTGRES_DB: ${{ secrets.USER_NAMEDB_POSTGRESS }}
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: 69720700
+          POSTGRES_DB: peliculasdb
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
