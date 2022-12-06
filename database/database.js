@@ -6,16 +6,15 @@ import _config from "../config/config.js";
 const env = process.env.ENV;
 const config = _config[env];
 
-console.log(config)
-
 // create connection
 const secuelize = new Sequelize(
-  "peliculasdb",
-  "postgres",
-  "69720700",
+  config.database,
+  config.username,
+  config.password,
   {
     host: "localhost",
     dialect: 'postgres',
+    logging: config.logging,
     define: {
       timestamps: false
     }

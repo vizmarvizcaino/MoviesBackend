@@ -9,7 +9,7 @@ router.get('/peliculas',getPelicula);
 
 router.get('/pelicula/:id',getpeliculaById);
 
-router.post('/pelicula',  createPelicula);
+router.post('/pelicula', isUserAuthenticated, createPelicula);
 
 router.get('/peliculas/:id/comentarios',getPeliculaComentario);
 

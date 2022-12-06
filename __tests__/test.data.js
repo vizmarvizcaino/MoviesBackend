@@ -36,13 +36,13 @@ describe('Test the post endpoints', () => {
     expect(status).to.equal(400);
   });
 
-  it('should return 400 if name, category is shorter than 4 characters', async () => {
-    const payload = {
-      "nombre": "El",
-      "categoria1": "ds", 
-    };
-    const { body, status } = await request(app).post('/pelicula').send(payload);
-    expect(status).to.equal(400);
-    expect(body.message).contains('the name and the category must have at least 4 characters');
-  }); 
+  // it('should return 400 if name, category is shorter than 4 characters', async () => {
+  //   const payload = {
+  //     "nombre": "El",
+  //     "categoria1": "ds", 
+  //   };
+  //   const { body, status } = await request(app).post('/pelicula').send(payload);
+  //   expect(status).to.equal(400);
+  //   expect(body.message).contains('the name and the category must have at least 4 characters');
+  // }); 
 });
