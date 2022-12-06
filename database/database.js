@@ -12,7 +12,7 @@ const secuelize = new Sequelize(
   "postgress",
   "937rapIb8tgXtUmbk5afmQqLOzSZAR2q",
   {
-    host: "localhost",
+    host: "dpg-ce75ctp4rebdt3d7fakg-a",
     dialect: 'postgres',
     logging: "console.log",
     define: {
