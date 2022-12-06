@@ -22,27 +22,27 @@ export const register = async (req, res) => {
       });
     }
 
-    // const validaCorreo = (correo) =>{ 
-    //   let expReg =  /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-    //   let esValido = expReg.test(correo);
-    //   if (esValido === false) {
-    //     return res.status(400).send({
-    //       message: "the email is not valid"
-    //     })
-    //   }
-    // };
-    // validaCorreo(req.body.email);
+    const validaCorreo = (correo) =>{ 
+      let expReg =  /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+      let esValido = expReg.test(correo);
+      if (esValido === false) {
+        return res.status(400).send({
+          message: "the email is not valid"
+        })
+      }
+    };
+    validaCorreo(req.body.email);
 
-    // const validaPassword = (password) =>{ 
-    //   let expReg =  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/;
-    //   let esValido = expReg.test(password);
-    //   if (esValido === false) {
-    //     return res.status(400).send({
-    //       message: "the password is not valid"
-    //   });
-    //   }
-    // };
-    // validaPassword(req.body.password);
+    const validaPassword = (password) =>{ 
+      let expReg =  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/;
+      let esValido = expReg.test(password);
+      if (esValido === false) {
+        return res.status(400).send({
+          message: "the password is not valid"
+      });
+      }
+    };
+    validaPassword(req.body.password);
     
     const {nombres, email, password} = req.body;
     const user = await User.create({
@@ -55,7 +55,7 @@ export const register = async (req, res) => {
       "userId": user.id
     });
   } catch (err) {
-    console.log(err);
+    return res.status(500).json({ message: error.message });
   }
 };
 

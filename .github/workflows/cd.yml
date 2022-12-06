@@ -10,10 +10,10 @@ jobs:
       postgres:
         image: postgres
         env:
-          DB_DEV_USER: ${{ secrets.USER_NAME_POSTGRES }}
-          DB_DEV_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
-          DB_DEV_DB_NAME: ${{ secrets.USER_NAMEDB_POSTGRES }}
-          DB_DEV_HOST: ${{ secrets.DB_HOST }}
+          DB_DEV_USER: postgress
+          DB_DEV_PASSWORD: 937rapIb8tgXtUmbk5afmQqLOzSZAR2q
+          DB_DEV_DB_NAME: express_curd
+          DB_DEV_HOST: dpg-ce75ctp4rebdt3d7fakg-a.oregon-postgres.render.com
 
         options: >-
           --health-cmd pg_isready

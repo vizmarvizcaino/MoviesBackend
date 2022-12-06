@@ -66,7 +66,7 @@ export const getPeliculaComentario = async (req, res) => {
   res.json(comentarios);
     
   } catch (error) {
-    
+    return res.status(500).json({ message: error.message });
   }
 };
 
