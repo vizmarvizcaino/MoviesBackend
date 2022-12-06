@@ -8,11 +8,11 @@ const config = _config[env];
 
 // create connection
 const secuelize = new Sequelize(
-  "express_curd",
-  "postgress",
-  "937rapIb8tgXtUmbk5afmQqLOzSZAR2q",
+  config.database,
+  config.username,
+  config.password,
   {
-    host: "dpg-ce75ctp4rebdt3d7fakg-a",
+    host: config.host,
     dialect: 'postgres',
     // logging: "console.log",
     define: {

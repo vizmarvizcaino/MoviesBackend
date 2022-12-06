@@ -3,10 +3,10 @@ dotenv.config();
 
 const config = {
   development: {
-    username: 'postgres',
-    password: '69720700',
-    database: 'peliculasdb' || "express_curd",
-    host: 'localhost',
+    username: 'postgress',
+    password: '937rapIb8tgXtUmbk5afmQqLOzSZAR2q',
+    database: 'express_curd',
+    host: 'dpg-ce75ctp4rebdt3d7fakg-a',
     // logging: console.log,
     dialect: 'postgres',    
   },

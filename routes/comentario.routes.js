@@ -5,7 +5,7 @@ import { isUserAuthenticated } from '../middlewares/auth.js';
 
 const router = Router();
 
-router.get('/comentarios', isUserAuthenticated, getComentario);
+router.get('/comentarios', getComentario);
 
 router.post('/comentario', isUserAuthenticated, createComentario);
 
