@@ -7,7 +7,7 @@ const config = {
     password: '69720700',
     database: 'peliculasdb' || "express_curd",
     host: 'localhost',
-    logging: console.log,
+    // logging: console.log,
     dialect: 'postgres',    
   },
   test: {
