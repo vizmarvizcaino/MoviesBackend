@@ -10,10 +10,10 @@ jobs:
       postgres:
         image: postgres
         env:
-          DB_DEV_USER: postgress
-          DB_DEV_PASSWORD: 937rapIb8tgXtUmbk5afmQqLOzSZAR2q
-          DB_DEV_DB_NAME: express_curd
-          DB_DEV_HOST: dpg-ce75ctp4rebdt3d7fakg-a.oregon-postgres.render.com
+          DB_DEV_USER: "postgress"
+          DB_DEV_PASSWORD: "937rapIb8tgXtUmbk5afmQqLOzSZAR2q"
+          DB_DEV_DB_NAME: "express_curd"
+          DB_DEV_HOST: "dpg-ce75ctp4rebdt3d7fakg-a.oregon-postgres.render.com"
 
         options: >-
           --health-cmd pg_isready
@@ -45,7 +45,7 @@ jobs:
       - name: call render webhook
         uses: fjogeleit/http-request-action@v1
         with:
-          url: https://api.render.com/deploy/srv-ce74q1cgqg4eemp0582g?key=JFpp-899ym0
+          url: "https://api.render.com/deploy/srv-ce74q1cgqg4eemp0582g?key=JFpp-899ym0"
           method: 'GET'
       
       # - name: Wait for Render Deployment
