@@ -8,9 +8,9 @@ const config = _config[env];
 
 // create connection
 const secuelize = new Sequelize(
-  config.database,
-  config.username,
-  config.password,
+  "express_curd",
+  "postgress",
+  "937rapIb8tgXtUmbk5afmQqLOzSZAR2q",
   {
     host: "localhost",
     dialect: 'postgres',
